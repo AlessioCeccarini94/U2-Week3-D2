@@ -1,7 +1,7 @@
 // costanti campi form
 
-const firstNameInput = document.getElementById("firstName")
-const lastNameInput = document.getElementById("lastName")
+let firstNameInput = document.getElementById("firstName")
+let lastNameInput = document.getElementById("lastName")
 // creo chiave memoria
 
 const KEY = "memory"
@@ -34,6 +34,11 @@ form.addEventListener("submit", (e) => {
   localStorage.setItem(KEY, JSON.stringify(users))
   form.reset()
 })
+
+if (users.length > 0) {
+  firstNameInput.value = users[0].firstName
+  lastNameInput.value = users[0].lastName
+}
 
 // pulsante per eliminare
 
