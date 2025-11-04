@@ -55,13 +55,18 @@ if (users.length > 0) {
 
 // TIMER
 
-let seconds = 0
-KEY2 = seconds
-
 const displaySeconds = document.getElementById("seconds")
+KEY2 = "countingSeconds"
+let seconds = parseInt(sessionStorage.getItem(KEY2)) || 0
+
+// secondi a schermo
+
+displaySeconds.textContent = seconds
+
+// conteggio dei secondi
 
 setInterval(() => {
   seconds++
   displaySeconds.textContent = seconds
-  sessionStorage.setItem(KEY2, JSON.stringify(seconds))
+  sessionStorage.setItem(KEY2, seconds)
 }, 1000)
