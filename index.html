@@ -15,7 +15,7 @@
     <header></header>
     <main>
       <h1 class="text-center">FORM</h1>
-      <div class="container">
+      <div class="container border-1 bg-dark-subtle p-3">
         <div class="row justify-content-center mt-5">
           <div class="col col-12 col-md-6">
             <form id="form">
@@ -39,7 +39,6 @@
                   required
                 />
               </div>
-
               <button type="submit" class="btn btn-primary">Salva</button>
               <button id="deleteBtn" type="button" class="btn btn-primary">
                 Rimuovi
@@ -49,8 +48,13 @@
         </div>
       </div>
     </main>
-    <section>
-      <div id="seconds" class="mt-5 text-center fs-1">0</div>
+    <section class="mt-5 fs-1 d-flex justify-content-center">
+      <div
+        id="seconds"
+        class="border border-5 rounded-circle border-black p-3 text-light bg-dark"
+      >
+        0
+      </div>
     </section>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
